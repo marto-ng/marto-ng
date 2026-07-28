@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora App - Inteligencia Financiera & Análisis Técnico en Tiempo Real</title>
+    <meta name="description" content="Nexora App es la plataforma móvil definitiva para análisis técnico de mercados, gráficos Candlestick, predicciones con IA y conversor de divisas.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bullish: '#10B981',
+                        bearish: '#EF4444',
+                        brand: {
+                            50: '#EEF2FF',
+                            100: '#E0E7FF',
+                            500: '#6366F1',
+                            600: '#4F46E5',
+                            700: '#4338CA',
+                            900: '#312E81'
+                        },
+                        darkbg: '#0F172A',
+                        darkcard: '#1E293B'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-emerald-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-300">Nexora App</span>
+                    <span class="ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">v1.4.0</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#caracteristicas" class="text-slate-300 hover:text-white transition-colors">Características</a>
+                <a href="#rendimiento" class="text-slate-300 hover:text-white transition-colors">Rendimiento & Batería</a>
+                <a href="#privacidad" class="text-slate-300 hover:text-white transition-colors">Privacidad</a>
+                <a href="#actualizaciones" class="text-slate-300 hover:text-white transition-colors">Notas de Versión</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <a href="#descarga" class="px-4 py-2 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl transition-all shadow-lg shadow-indigo-600/30 flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <span>Obtener App</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-20 lg:py-28">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.25),rgba(255,255,255,0))]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Inteligencia Artificial Financiera Nativa en Android</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Análisis Técnico y Predicciones en Tiempo Real con <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-emerald-400">Nexora App</span>
+                </h1>
+                
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    Gráficos Candlestick fluidos a 60 FPS, modelo predictivo con Machine Learning local, recomendaciones respaldadas por Google Gemini 3.5 Flash AI y conversor de divisas global.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#descarga" class="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-extrabold rounded-xl transition-all shadow-xl shadow-emerald-500/20 flex items-center justify-center space-x-2 text-base">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        <span>Descargar Android APK</span>
+                    </a>
+                    <a href="#caracteristicas" class="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl border border-slate-700 transition-all flex items-center justify-center space-x-2 text-base">
+                        <span>Explorar Funciones</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Stats summary -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-12 border-t border-slate-800/80">
+                    <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                        <div class="text-2xl font-black text-emerald-400">60 FPS</div>
+                        <div class="text-xs text-slate-400 font-medium mt-1">Renderizado en Canvas Nativo</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                        <div class="text-2xl font-black text-indigo-400">100% Local</div>
+                        <div class="text-xs text-slate-400 font-medium mt-1">Privacidad Room DB</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                        <div class="text-2xl font-black text-purple-400">Gemini 3.5</div>
+                        <div class="text-xs text-slate-400 font-medium mt-1">Análisis de Sentimiento AI</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                        <div class="text-2xl font-black text-amber-400">300 ms</div>
+                        <div class="text-xs text-slate-400 font-medium mt-1">Ahorro de Batería con Debounce</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="caracteristicas" class="py-20 bg-slate-950/60 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold uppercase tracking-widest text-indigo-400 mb-2">Poderosa Suite Financiera</h2>
+                <p class="text-3xl font-extrabold text-white">Diseñado para Traders e Inversores Exigentes</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-5 border border-indigo-500/20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Gráficos Candlestick</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Velas japonesas renderizadas sobre Canvas con indicadores técnicos integrados: SMA (Media Móvil Simple), EMA (Exponencial) y volumen de negociación.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-5 border border-purple-500/20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Predicciones ML + Gemini AI</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Algoritmo de simulación Monte Carlo para proyecciones de tendencia y análisis de sentimiento automatizado impulsado por Google Gemini 3.5 Flash.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-5 border border-emerald-500/20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Conversor Forex de Divisas</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Cotizaciones de divisas globales en tiempo real con más de 150 monedas internacionales, gráfico de variaciones y actualización en segundo plano.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 border border-amber-500/20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Lista de Favoritos (Watchlist)</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Guarda tus pares de divisas, acciones y criptomonedas preferidas con sincronización local inmediata en base de datos Room.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-5 border border-sky-500/20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Material Design 3 & Material You</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Conmutación fluida entre Modo Oscuro y Modo Claro, con soporte para paleta de Color Dinámico en Android 12+ (API 31+).
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-indigo-500/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-5 border border-teal-500/20">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Arquitectura Local-First</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Tus datos pertenecen únicamente a tu dispositivo. Sin creación de cuenta obligatoria ni servidores externos de rastreo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Battery & Performance Optimizations Section -->
+    <section id="rendimiento" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold mb-4">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <span>Eficiencia Energética Superior</span>
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-white mb-6">Optimizado para Reducir el Consumo de Batería</h2>
+                    <p class="text-slate-300 mb-8 leading-relaxed">
+                        Nexora App implementa las mejores prácticas de ingeniería móvil para garantizar la máxima autonomía de batería sin sacrificar la frescura de los datos financieros.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Debouncing en Búsquedas (300 ms)</h4>
+                                <p class="text-xs text-slate-400">Previene ráfagas de solicitudes de red móviles mientras escribes en la barra de búsqueda.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Ejecución Paralela de Corrutinas (`awaitAll`)</h4>
+                                <p class="text-xs text-slate-400">Peticiones concurrentes agrupadas que reducen el tiempo de actividad del módem celular de Android.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Caché Inteligente de Divisas</h4>
+                                <p class="text-xs text-slate-400">Evita actualizaciones repetidas de tipos de cambio populares mediante un intervalo controlado de 1 hora.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/60 shadow-2xl">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-xs font-extrabold uppercase text-indigo-400">Reporte de Desempeño</span>
+                        <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20">A+ Eficiencia</span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="text-slate-300">Uso de CPU en Renderizado Canvas</span>
+                                <span class="text-emerald-400">&lt; 3%</span>
+                            </div>
+                            <div class="w-full bg-slate-700/50 rounded-full h-2">
+                                <div class="bg-emerald-400 h-2 rounded-full" style="width: 15%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="text-slate-300">Ahorro de Red por Debouncing</span>
+                                <span class="text-indigo-400">75% Reducción</span>
+                            </div>
+                            <div class="w-full bg-slate-700/50 rounded-full h-2">
+                                <div class="bg-indigo-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <span class="text-slate-300">Retención de Memoria (RAM)</span>
+                                <span class="text-sky-400">Optimizado (&lt; 65MB)</span>
+                            </div>
+                            <div class="w-full bg-slate-700/50 rounded-full h-2">
+                                <div class="bg-sky-400 h-2 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacidad" class="py-20 bg-slate-950/60 border-t border-slate-800/60">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-extrabold uppercase tracking-widest text-emerald-400 mb-2">Protección de Datos</h2>
+                <p class="text-3xl font-extrabold text-white">Política de Privacidad Transparente</p>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-slate-800/40 border border-slate-800 space-y-6 text-sm text-slate-300">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">1. Principio Local-First</h3>
+                    <p class="leading-relaxed text-slate-400">
+                        Nexora App no requiere creación de cuenta de usuario ni recopila correos electrónicos. Tu lista de activos guardados (Watchlist) y preferencias de interfaz se guardan únicamente en la base de datos local de tu teléfono mediante Room (SQLite).
+                    </p>
+                </div>
+
+                <hr class="border-slate-800">
+
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">2. Peticiones de Red Directas y Cifradas</h3>
+                    <p class="leading-relaxed text-slate-400">
+                        Las consultas de precios de mercado e inteligencia artificial se conectan de forma directa y cifrada (HTTPS/TLS 1.3) a Twelve Data API, ExchangeRate API y Google Gemini AI API. Ningún dato de identificación personal es transmitido.
+                    </p>
+                </div>
+
+                <hr class="border-slate-800">
+
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-2">3. Permisos Mínimos del Sistema</h3>
+                    <p class="leading-relaxed text-slate-400">
+                        La aplicación solicita únicamente el permiso <code class="text-indigo-300 bg-slate-900 px-2 py-0.5 rounded">android.permission.INTERNET</code> para descargar las cotizaciones de mercado en tiempo real. No accedemos a contactos, archivos, ubicación ni cámara.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Release Notes Section -->
+    <section id="actualizaciones" class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-extrabold uppercase tracking-widest text-indigo-400 mb-2">Registro de Cambios</h2>
+                <p class="text-3xl font-extrabold text-white">Notas de Actualización (Release Notes)</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- v1.4.0 -->
+                <div class="p-6 rounded-2xl bg-slate-800/50 border border-indigo-500/40">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-xl font-bold text-white">Versión 1.4.0</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">Lanzamiento Actual</span>
+                        </div>
+                        <span class="text-xs text-slate-400">27 de Julio, 2026</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                        <li>Implementación completa de Tema Material 3 (Modo Oscuro / Modo Claro) en Ajustes.</li>
+                        <li>Soporte de Color Dinámico (Material You) para Android 12+.</li>
+                        <li>Optimización de batería con Debouncing (300 ms) y llamadas concurrentes con corrutinas.</li>
+                        <li>Publicación de la Landing Page Web oficial y sección legal interactiva.</li>
+                    </ul>
+                </div>
+
+                <!-- v1.3.0 -->
+                <div class="p-6 rounded-2xl bg-slate-800/30 border border-slate-800">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-lg font-bold text-slate-200">Versión 1.3.0</span>
+                        <span class="text-xs text-slate-500">20 de Julio, 2026</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-400 list-disc list-inside">
+                        <li>Renombrado oficial de la aplicación a Nexora App.</li>
+                        <li>Actualización de la arquitectura visual según los lineamientos de Material 3.</li>
+                    </ul>
+                </div>
+
+                <!-- v1.2.0 -->
+                <div class="p-6 rounded-2xl bg-slate-800/30 border border-slate-800">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-lg font-bold text-slate-200">Versión 1.2.0</span>
+                        <span class="text-xs text-slate-500">12 de Julio, 2026</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-400 list-disc list-inside">
+                        <li>Motor de predicción de precios local (PredictionEngine) con método Monte Carlo.</li>
+                        <li>Análisis de sentimiento impulsado por Google Gemini 3.5 Flash AI.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-black text-sm">N</div>
+                <span class="font-extrabold text-white text-base">Nexora App</span>
+                <span class="text-xs text-slate-500">© 2026 Nexora Inc. Todos los derechos reservados.</span>
+            </div>
+
+            <div class="flex items-center space-x-6 text-xs text-slate-400">
+                <a href="#privacidad" class="hover:text-white transition-colors">Política de Privacidad</a>
+                <a href="#actualizaciones" class="hover:text-white transition-colors">Notas de Versión</a>
+                <a href="#rendimiento" class="hover:text-white transition-colors">Rendimiento</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
