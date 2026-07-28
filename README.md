@@ -17,35 +17,29 @@
 </div>
 
 
-<!--h2 without bottom border-->
-<div id="user-content-toc">
-  <ul align="center">
-    <summary><h2 style="display: inline-block">Confusion is part of Programming</h2></summary>
-  </ul>
-</div>
+
 
 
 <!--Intro start-->
-- 🔭 I’m currently working on **AWS, React, React Native, Nodejs, MongoDB**
+- 🔭 Actualmente trabajo con **Python, React,  Node.js y MongoDB**.
 
-- 🌱 I’m currently learning **to put together multiple Hyper Beast Stack for Scalable Applications.**
+- 🌱 Estoy aprendiendo a **implementar arquitecturas basadas en el stack "Hyper Beast" para aplicaciones escalables**.
 
-- ☁️ I've keen interest in cloud computing. So,I'm learning **AWS**
+- ☁️ Me interesa mucho la computación en la nube; por eso, estoy aprendiendo **AWS**.
 
-- 📝 I regularly write articles on [Hashnode](https://1010nishant.hashnode.dev/)
+- 📝 Tambien estoy aprendiendo a programar app en Android 
 
-- 💬 Ask me about **AWS, react, react-native, nodejs, mongoDB**
+- 💬 Pregúntame sobre **Java, Python y MongoDB**.
 
-- 📫 Feel free to reach me out **nishantjangid6377@gmail.com**
+- 📫 No dudes en contactarme en **nietog.martin@gmail.com**.
 
-- 🏠 Don't hesitate to drop me a **👋** on Discord –  [1010nishant](https://discordapp.com/users/957722095381540874) my username!
 <!--Intro end-->
 
 
 
 
 
-</p>        
+     
 <!--- stats (end) -->
 
 
